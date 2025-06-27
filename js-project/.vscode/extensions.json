@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "alexcvzz.vscode-sqlite",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "esbenp.prettier-vscode",
+    "idered.npm",
+    "ms-azuretools.vscode-docker",
+    "xabikos.javascriptsnippets",
+    "wix.vscode-import-cost",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "ritwickdey.liveserver",
+    "visualstudioexptteam.vscodeintellicode",
+    "ecmel.vscode-html-css",
+    "naumovs.color-highlight",
+    "aaron-bond.better-comments",
+    "gruntfuggly.todo-tree",
+    "streetsidesoftware.code-spell-checker",
+    "dzhavat.bracket-pair-toggler"
+  ]
+}

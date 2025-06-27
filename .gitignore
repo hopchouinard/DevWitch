@@ -3,11 +3,8 @@
 .AppleDouble
 .LSOverride
 
-# VS Code settings
-.vscode/
-!.vscode/extensions.json
-!.vscode/launch.json
-!.vscode/settings.schema.json
+# Gemini-cli configuration
+.gemini/
 
 # Node
 node_modules/
