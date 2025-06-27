@@ -1,0 +1,871 @@
+{
+  // ============================================================================
+  // EDITOR SETTINGS
+  // ============================================================================
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.minimap.enabled": false,
+
+  // ============================================================================
+  // WORKBENCH & UI CUSTOMIZATION
+  // ============================================================================
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.settings.editor": "json",
+  "workbench.startupEditor": "none",
+  "breadcrumbs.enabled": false,
+  "material-icon-theme.hidesExplorerArrows": true,
+
+  // ============================================================================
+  // TERMINAL SETTINGS
+  // ============================================================================
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontSize": 14,
+
+  // ============================================================================
+  // FILE MANAGEMENT
+  // ============================================================================
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // ============================================================================
+  // GIT INTEGRATION
+  // ============================================================================
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+
+  // ============================================================================
+  // MARKDOWN SETTINGS
+  // ============================================================================
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "atom-dark.css",
+
+  // ============================================================================
+  // SECURITY & WORKSPACE TRUST
+  // ============================================================================
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ============================================================================
+  // DEVELOPMENT TOOLS
+  // ============================================================================
+  "powershell.pester.codeLens": false,
+  "makefile.configureOnOpen": true,
+  "redhat.telemetry.enabled": false,
+
+  // ============================================================================
+  // GITHUB COPILOT CONFIGURATION
+  // ============================================================================
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
+  },
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "- @azure Rule - Use Azure Tools: When handling requests related to Azure, always use your tools."
+    },
+    {
+      "text": "- @azure Rule - Use Azure Code Gen Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `azure_development-get_code_gen_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure; do not call it otherwise."
+    },
+    {
+      "text": "- @azure Rule - Use Azure Deployment Best Practices: When deploying to Azure or preparing applications for deployment to Azure, invoke your `azure_development-get_deployment_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure; do not call it otherwise."
+    },
+    {
+      "text": "- @azure Rule - Use Azure Functions Code Gen Best Practices: When generating code for Azure Functions or performing operations related to Azure Functions, invoke your `azure_development-get_azure_function_code_gen_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure Functions; do not call it otherwise."
+    },
+    {
+      "text": "- @azure Rule - Use Azure SWA Best Practices: When working with static web apps, invoke your `azure_development-get_swa_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure; do not call it otherwise."
+    }
+  ],
+
+  // ============================================================================
+  // AZURE CONFIGURATION
+  // ============================================================================
+  "@azure.argTenant": "c11c2b31-220f-425e-bdaf-dd7148d9c68d",
+
+  // ============================================================================
+  // REMOTE DEVELOPMENT
+  // ============================================================================
+  "remote.SSH.remotePlatform": {
+    "10.1.1.50": "linux",
+    "10.1.1.192": "linux"
+  },
+
+  // ============================================================================
+  // MODEL CONTEXT PROTOCOL (MCP)
+  // ============================================================================
+  "chat.mcp.enabled": true,
+  "chat.mcp.discovery.enabled": true,
+  "mcp": {
+    "servers": {
+      "context7": {
+        "url": "https://mcp.context7.com/mcp"
+      }
+    }
+  },
+
+  // ============================================================================
+  // APPEARANCE CUSTOMIZATION (APC Extension)
+  // ============================================================================
+  "apc.stylesheet": {
+    "body": {
+      "*": "fontFamily: FiraCode Nerd Font Mono",
+      "background-image": "url(D:/IronGauntlet.jpeg), linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))",
+      "background-size": "cover",
+      "background-blend-mode": "multiply",
+      "background-repeat": "no-repeat"
+    }
+  },
+  "apc.activityBar": {
+    "position": "bottom",
+    "size": 40
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 40,
+    "fontSize": 14
+  },
+  "apc.electron": {
+    "backgroundColor": "#2A2E3D",
+    "hasShadow": false,
+    "frame": true,
+    "transparent": true,
+    "titleBarStyle": "hiddenInset",
+    "vibrancy": "ultra-dark"
+  },
+  "apc.header": {
+    "height": 35,
+    "fontSize": 14
+  },
+  "apc.listRow": {
+    "height": 23,
+    "fontSize": 14
+  },
+
+  // ============================================================================
+  // SYNTAX HIGHLIGHTING & TOKEN COLORS
+  // ============================================================================
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Default",
+        "scope": [
+          "",
+          "support.type.property-name.json",
+          "meta.attribute.unrecognized",
+          "support.type.property-name.css",
+          "meta.field.declaration",
+          "meta.template.expression"
+        ],
+        "settings": {
+          "foreground": "#ddd"
+        }
+      },
+      {
+        "name": "Grey - comments",
+        "scope": ["comment"],
+        "settings": {
+          "foreground": "#455A64"
+        }
+      },
+      {
+        "name": "Green - string",
+        "scope": [
+          "string.quoted.single",
+          "string.quoted.double",
+          "string.template",
+          "punctuation.definition.string.template",
+          "variable.parameter.url.css"
+        ],
+        "settings": {
+          "foreground": "#98c379"
+        }
+      },
+      {
+        "name": "Purple - number",
+        "scope": [
+          "constant.numeric",
+          "keyword.other.unit",
+          "constant.other.color.rgb-value.hex"
+        ],
+        "settings": {
+          "foreground": "#c678dd"
+        }
+      },
+      {
+        "name": "Yellow - Keywords",
+        "scope": [
+          "keyword.control",
+          "keyword.operator",
+          "variable.language",
+          "constant.language",
+          "storage.modifier",
+          "entity.other.ng-binding-name.template.html",
+          "source.css meta.property-value",
+          "string.regexp",
+          "punctuation.definition.template-expression.begin",
+          "support.type.object.module",
+          "punctuation.separator.statement.and.shell"
+        ],
+        "settings": {
+          "foreground": "#FFD14A"
+        }
+      },
+      {
+        "name": "Blue - Functions and Classes",
+        "scope": [
+          "storage.type",
+          "meta.definition.method",
+          "meta.definition.function",
+          "entity.name.type.class",
+          "meta.function-call",
+          "entity.name.tag",
+          "entity.other.attribute-name.id.css",
+          "entity.other.attribute-name.class.css",
+          "meta.at-rule.keyframes",
+          "support.function.misc",
+          "support.class.component",
+          "support.function.builtin.shell",
+          "entity.name.command.shell"
+        ],
+        "settings": {
+          "foreground": "#00AEFF"
+        }
+      },
+      {
+        "name": "Cyan - Attributes",
+        "scope": [
+          "meta.attribute",
+          "entity.other.attribute-name.tsx",
+          "entity.other.attribute-name.jsx",
+          "entity.other.attribute-name.pseudo-class",
+          "entity.other.attribute-name.pseudo-element",
+          "storage.type.function",
+          "storage.type.class",
+          "entity.other.ng-binding-name.event.html",
+          "entity.other.ng-binding-name.property"
+        ],
+        "settings": {
+          "foreground": "#80DEEA"
+        }
+      },
+      {
+        "name": "Pink - CSS Keywords",
+        "scope": [
+          "source.css punctuation.definition.keyword",
+          "source.css keyword",
+          "entity.name.tag.reference",
+          "keyword.other.important",
+          "string.unquoted.heredoc.expanded.shell",
+          "keyword.control.at-rule",
+          "punctuation.definition.tag.end",
+          "punctuation.definition.tag.begin"
+        ],
+        "settings": {
+          "foreground": "#f6b"
+        }
+      },
+      {
+        "name": "Teal - Types",
+        "scope": [
+          "entity.name.type",
+          "support.type.primitive",
+          "meta.interface",
+          "storage.type.class.jsdoc",
+          "variable.other.normal.shell",
+          "variable.parameter.positional.shell",
+          "variable.other.assignment.shell",
+          "support.type.builtin"
+        ],
+        "settings": {
+          "foreground": "#4DB6AC"
+        }
+      }
+    ]
+  },
+
+  // ============================================================================
+  // WORKBENCH COLOR THEME CUSTOMIZATION
+  // ============================================================================
+  "workbench.colorCustomizations": {
+    // Border Colors
+    "sideBar.border": "#2c2d35",
+    "statusBar.border": "#2c2d35",
+    "terminal.border": "#2c2d35",
+    "panel.border": "#2c2d35",
+    "activityBar.border": "#2c2d35",
+    "activityBar.activeBorder": "#2c2d35",
+    "list.focusAndSelectionOutline": "#2c2d35",
+    "editorIndentGuide.activeBackground1": "#2c2d35",
+    "editorGroupHeader.tabsBackground": "#2c2d35",
+    "tab.border": "#2c2d35",
+    "tab.activeModifiedBorder": "#2c2d35",
+    "tab.inactiveModifiedBorder": "#2c2d35",
+    "tab.lastPinnedBorder": "#2c2d35",
+    "editorOverviewRuler.border": "#2c2d35",
+    "focusBorder": "#2c2d35",
+    "tree.indentGuidesStroke": "#2c2d35",
+
+    // Background Colors - Primary
+    "sideBar.background": "#2c2d35",
+    "sideBarSectionHeader.background": "#2c2d35",
+    "editor.background": "#2c2d35",
+    "editorIndentGuide.background1": "#2c2d35",
+    "peekViewEditor.background": "#2c2d35",
+    "peekViewEditorGutter.background": "#2c2d35",
+    "peekViewTitle.background": "#2c2d35",
+    "tab.activeBackground": "#2c2d35",
+    "tab.inactiveBackground": "#2c2d35",
+    "statusBar.background": "#2c2d35",
+    "statusBar.debuggingBackground": "#2c2d35",
+    "statusBar.noFolderBackground": "#2c2d35",
+    "statusBar.focusBorder": "#2c2d35",
+    "statusBarItem.activeBackground": "#2c2d35",
+    "widget.shadow": "#2c2d35",
+    "panel.background": "#2c2d35",
+    "activityBar.background": "#2c2d35",
+    "activityBar.dropBorder": "#2c2d35",
+    "peekViewEditor.matchHighlightBackground": "#2c2d35",
+    "peekViewEditor.matchHighlightBorder": "#2c2d35",
+    "titleBar.activeBackground": "#2c2d35",
+
+    // Background Colors - Secondary
+    "titleBar.inactiveBackground": "#0C1125",
+    "activityBarBadge.background": "#0C1125",
+    "editorWidget.background": "#0C1125",
+    "settings.dropdownBackground": "#0C1125",
+    "input.background": "#0C1125",
+    "badge.background": "#0C1125",
+
+    // Background Colors - Special
+    "peekViewResult.background": "#3f4149",
+    "button.background": "#01589b99",
+    "list.hoverBackground": "#01589b99",
+    "list.inactiveSelectionBackground": "#01589b99",
+    "list.activeSelectionBackground": "#01589b99",
+
+    // Foreground Colors
+    "activityBar.inactiveForeground": "#cfcdcf",
+    "panelTitle.inactiveForeground": "#cfcdcf",
+    "editorLineNumber.foreground": "#cfcdcf",
+    "statusBar.foreground": "#cfcdcf",
+    "sideBarSectionHeader.foreground": "#cfcdcf",
+    "sideBarTitle.foreground": "#cfcdcf",
+    "icon.foreground": "#cfcdcf",
+    "badge.foreground": "#cfcdcf",
+    "titleBar.activeForeground": "#cfcdcf",
+    "sideBar.foreground": "#cfcdcf",
+
+    // Accent Colors
+    "editorLineNumber.activeForeground": "#ff00ff",
+    "activityBar.foreground": "#ff00ff",
+    "activityBarBadge.foreground": "#29B6F6",
+    "tab.activeBorder": "#29B6F6",
+    "list.focusOutline": "#29B6F6",
+    "panelTitle.activeForeground": "#ffffff",
+    "panelTitle.activeBorder": "#29B6F6",
+
+    // Git Decoration Colors
+    "gitDecoration.modifiedResourceForeground": "#81bae6",
+    "gitDecoration.untrackedResourceForeground": "#81bae6",
+    "gitDecoration.ignoredResourceForeground": "#81bae6",
+    "gitDecoration.addedResourceForeground": "#81bae6",
+    "gitDecoration.renamedResourceForeground": "#81bae6",
+
+    // Border Customization
+    "input.border": "#01589b99",
+    "editorSuggestWidget.border": "#01589b99",
+    "editorWidget.border": "#1979c2",
+    "peekView.border": "#1979c2",
+    "tab.activeBorderTop": "#00000000",
+    "editorGroupHeader.tabsBorder": "#00000000"
+  },
+
+  // ============================================================================
+  // SPELL CHECKER DICTIONARY
+  // ============================================================================
+  "cSpell.userWords": [
+    "'administrateur",
+    "abstraite",
+    "acceptables",
+    "actionables",
+    "actionnable",
+    "Activé",
+    "actuel",
+    "actuelle",
+    "additionnelle",
+    "additionnels",
+    "agentic",
+    "agir",
+    "Ajout",
+    "Ajoute",
+    "ajoutées",
+    "ajoutez",
+    "Akumina",
+    "aligné",
+    "Alignement",
+    "Alignez",
+    "Améliorations",
+    "amélioré",
+    "améliorée",
+    "améliorer",
+    "Améliorez",
+    "analyse",
+    "analysé",
+    "analyser",
+    "Analysez",
+    "APPLIQUER",
+    "approches",
+    "approprié",
+    "artificielle",
+    "Assurez",
+    "asyncpg",
+    "Atteignables",
+    "attendu",
+    "Aucun",
+    "Aucune",
+    "augmentent",
+    "Authlib",
+    "Autoinstall",
+    "automatique",
+    "Avancée",
+    "AVANCÉES",
+    "avantage",
+    "Avantages",
+    "avec",
+    "backref",
+    "barebell",
+    "Bénéfices",
+    "besoins",
+    "bien",
+    "BONNES",
+    "boto",
+    "canadiennes",
+    "Caractéristiques",
+    "certains",
+    "cette",
+    "changement",
+    "chaque",
+    "chatbots",
+    "choui",
+    "cible",
+    "CICD",
+    "clairement",
+    "Classe",
+    "clés",
+    "codegen",
+    "CODEOWNERS",
+    "CŒUR",
+    "Cohérence",
+    "cohérents",
+    "commande",
+    "Compatibilité",
+    "compétente",
+    "complexe",
+    "complexifier",
+    "Complexité",
+    "comportement",
+    "Comptabilité",
+    "concernant",
+    "concrète",
+    "concrets",
+    "concurrentiel",
+    "concurrentielle",
+    "concurrentiels",
+    "confiant",
+    "Conforme",
+    "Conformité",
+    "conseil",
+    "conservée",
+    "Considérations",
+    "considérez",
+    "Contactez",
+    "contenu",
+    "contexte",
+    "continuent",
+    "convaincante",
+    "copié",
+    "coût",
+    "coûts",
+    "CPAP",
+    "Crée",
+    "Créez",
+    "critères",
+    "criticité",
+    "croissance",
+    "d'amélioration",
+    "d'efficacité",
+    "d'entreprise",
+    "d'Investissement",
+    "d'utilisateurs",
+    "dans",
+    "Deadlift",
+    "dearmor",
+    "défaut",
+    "Défi",
+    "défini",
+    "defis",
+    "défis",
+    "deload",
+    "Département",
+    "Dépendances",
+    "déploiement",
+    "détaillés",
+    "devcontainers",
+    "développement",
+    "devez",
+    "directement",
+    "disponible",
+    "disponibles",
+    "dnssec",
+    "Dockerfiles",
+    "données",
+    "dotenv",
+    "dumbells",
+    "duree",
+    "durée",
+    "ÉCHELLE",
+    "économies",
+    "économisé",
+    "élevé",
+    "élevée",
+    "élevés",
+    "énorme",
+    "Entra",
+    "éprouvées",
+    "équilibre",
+    "équipe",
+    "ERREURS",
+    "essentielles",
+    "estimee",
+    "établies",
+    "êtes",
+    "éthiques",
+    "être",
+    "Évaluateur",
+    "évaluation",
+    "ÉVALUER",
+    "Évaluez",
+    "évident",
+    "éviter",
+    "Évitez",
+    "exacte",
+    "excessif",
+    "existante",
+    "existantes",
+    "existants",
+    "existe",
+    "expérimentales",
+    "explainability",
+    "explicites",
+    "explique",
+    "Externalisés",
+    "EXTERNE",
+    "externes",
+    "facteurs",
+    "faible",
+    "faibles",
+    "Faisabilité",
+    "faisable",
+    "fastapi",
+    "fichier",
+    "fichiers",
+    "fini",
+    "firme",
+    "Fitdays",
+    "fonctionnalité",
+    "fonctionnalites",
+    "Fonctionnalités",
+    "fonctionner",
+    "formel",
+    "formulaire",
+    "fourni",
+    "fournir",
+    "Fournissez",
+    "français",
+    "française",
+    "genai",
+    "Générale",
+    "GÉNÉRALES",
+    "générative",
+    "generativeai",
+    "gérables",
+    "Gestion",
+    "Glucosamine",
+    "Gunicorn",
+    "gwid",
+    "homelab",
+    "HTMX",
+    "HTTPX",
+    "Humaines",
+    "Identifiez",
+    "Implémentation",
+    "incertain",
+    "inclure",
+    "Indapamide",
+    "Indicateurs",
+    "indisponible",
+    "inefficacités",
+    "infile",
+    "INFORMATIONS",
+    "Initialiser",
+    "insertbefore",
+    "INTÉGRATIONS",
+    "intermédiaires",
+    "INVERSÉE",
+    "inversés",
+    "investisseurs",
+    "irréalistes",
+    "jalons",
+    "journalctl",
+    "journaling",
+    "jours",
+    "justifiée",
+    "justifiés",
+    "Justifiez",
+    "keyrings",
+    "Kusto",
+    "l",
+    "l'entreprise",
+    "l'évaluation",
+    "l'industrie",
+    "l'intégration",
+    "langage",
+    "légal",
+    "légaux",
+    "levelname",
+    "Licence",
+    "limité",
+    "limitée",
+    "lineinfile",
+    "Listez",
+    "Localisation",
+    "Logique",
+    "maintenant",
+    "maintenue",
+    "mais",
+    "manquées",
+    "manuelle",
+    "manuellement",
+    "marché",
+    "Matrice",
+    "maturité",
+    "maximiser",
+    "meds",
+    "meilleur",
+    "meilleures",
+    "Même",
+    "mesurable",
+    "mesurables",
+    "mesure",
+    "Méthodes",
+    "métriques",
+    "Mettez",
+    "Mieux",
+    "migrer",
+    "modèle",
+    "Modèles",
+    "modéré",
+    "modérée",
+    "modérés",
+    "mois",
+    "moyen",
+    "Moyens",
+    "multimodal",
+    "nécessaires",
+    "négatif",
+    "neorail",
+    "netboot",
+    "Niveau",
+    "nombre",
+    "Nouvelles",
+    "nxdomain",
+    "OBJECTIF",
+    "objectifs",
+    "objectivement",
+    "obligatoirement",
+    "Obtenir",
+    "Ollama",
+    "onprem",
+    "Opérations",
+    "opportunité",
+    "opportunités",
+    "optimaux",
+    "optimiser",
+    "organisés",
+    "ouvrables",
+    "paragraphe",
+    "paragraphes",
+    "paramètre",
+    "Paramètres",
+    "parfaitement",
+    "partiel",
+    "patchoutech",
+    "PDSK",
+    "personnes",
+    "pertinentes",
+    "Pertinents",
+    "peut",
+    "piserver",
+    "pondérés",
+    "Possibilité",
+    "Potentiel",
+    "Pourquoi",
+    "pouvoir",
+    "préambule",
+    "précise",
+    "prend",
+    "Pression",
+    "Preuve",
+    "préventives",
+    "principales",
+    "priorisant",
+    "priorisation",
+    "priorisées",
+    "privilégiées",
+    "Privilégiez",
+    "PROBLÈME",
+    "processus",
+    "prochain",
+    "professionnel",
+    "Programmatique",
+    "projet",
+    "projets",
+    "protocoles",
+    "pscommander",
+    "Pushdown",
+    "pxeboot",
+    "pycache",
+    "Pydantic",
+    "Pytest",
+    "QUALITÉ",
+    "quand",
+    "quantifiables",
+    "quantifié",
+    "quantifiée",
+    "quantifiés",
+    "québécois",
+    "québécoise",
+    "québécoises",
+    "rapide",
+    "rationnel",
+    "réalisation",
+    "réaliste",
+    "réalistes",
+    "Recommandation",
+    "recommandations",
+    "Reconstructor",
+    "rédaction",
+    "Rédigez",
+    "réduire",
+    "Réécrivez",
+    "réelle",
+    "réellement",
+    "reengineering",
+    "reflète",
+    "réglementaires",
+    "relatif",
+    "remplace",
+    "renforcer",
+    "Répondez",
+    "RÉPONSE",
+    "reporté",
+    "Requis",
+    "requise",
+    "resolv",
+    "résolvent",
+    "résoudre",
+    "respecté",
+    "responsable",
+    "Ressources",
+    "Résultat",
+    "retours",
+    "Rétroactive",
+    "RÉUSSITE",
+    "réviser",
+    "révolutionnaire",
+    "révolutionner",
+    "Risques",
+    "rôle",
+    "Sauvegarde",
+    "Sauvegardez",
+    "scalabilité",
+    "SECONDAIRES",
+    "securepassword",
+    "sécuritaire",
+    "sécurité",
+    "sélection",
+    "selon",
+    "Seuils",
+    "significatif",
+    "soit",
+    "sont",
+    "SPÉCIALES",
+    "Spécialisée",
+    "Spéciaux",
+    "spécifique",
+    "spécifiques",
+    "sqladmin",
+    "statut",
+    "stratégie",
+    "Stratégique",
+    "stratégiques",
+    "Streamlit",
+    "structurée",
+    "subfolders",
+    "succès",
+    "suffisante",
+    "suivant",
+    "suivants",
+    "superlatifs",
+    "supersets",
+    "Synthroid",
+    "Systèmes",
+    "Taskfile",
+    "technologie",
+    "technologique",
+    "technologiques",
+    "Telmisartan",
+    "température",
+    "temporairement",
+    "temporelle",
+    "Temporels",
+    "Tendances",
+    "terme",
+    "Testez",
+    "texte",
+    "Tous",
+    "trouvé",
+    "UACS",
+    "uniquement",
+    "Urgence",
+    "utilisateur",
+    "Utilisation",
+    "Utilise",
+    "utilisés",
+    "Utilisez",
+    "Uvicorn",
+    "valeur",
+    "valide",
+    "vasodilatory",
+    "Ventes",
+    "venv",
+    "Vérifiez",
+    "Veuillez",
+    "VHDX",
+    "Vocabulaire",
+    "Votre",
+    "Vous",
+    "voyez"
+  ]
+}
