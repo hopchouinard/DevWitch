@@ -139,6 +139,16 @@
     "servers": {
       "context7": {
         "url": "https://mcp.context7.com/mcp"
+      },
+      "github": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-github"
+        ],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "ADD YOUR GITHUB PERSONAL ACCESS TOKEN HERE"
+        }
       }
     }
   },
