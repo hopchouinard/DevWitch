@@ -138,7 +138,13 @@
   "mcp": {
     "servers": {
       "context7": {
-        "url": "https://mcp.context7.com/mcp"
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "mcp/context7"
+        ]
       },
       "github": {
         "command": "npx",
@@ -147,7 +153,32 @@
           "@modelcontextprotocol/server-github"
         ],
         "env": {
-          "GITHUB_PERSONAL_ACCESS_TOKEN": "ADD YOUR GITHUB PERSONAL ACCESS TOKEN HERE"
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR GITHUB PERSONAL ACCESS TOKEN HERE"
+        }
+      },
+      "memory": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-v",
+          "/local-directory:/local-directory",
+          "mcp/memory"
+        ]
+      },
+      "brave": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-e",
+          "BRAVE_API_KEY",
+          "mcp/brave-search"
+        ],
+        "env": {
+          "BRAVE_API_KEY": "YOUR BRAVE API KEY HERE"
         }
       }
     }
