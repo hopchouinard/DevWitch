@@ -180,7 +180,18 @@
         "env": {
           "BRAVE_API_KEY": "YOUR BRAVE API KEY HERE"
         }
-      }
+      },
+      "taskmaster-ai": {
+        "command": "npx",
+        "args": ["-y", "--package=task-master-ai", "task-master-ai"],
+        "env": {
+          "ANTHROPIC_API_KEY": "YOUR ANTHROPIC API KEY HERE",
+          "PERPLEXITY_API_KEY": "YOUR PERPLEXITY API KEY HERE",
+          "OPENAI_API_KEY": "YOUR OPENAI API KEY HERE",
+          "GOOGLE_API_KEY": "YOUR GOOGLE API KEY HERE"
+        },
+        "type": "stdio"
+      }      
     }
   },
 
